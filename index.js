@@ -198,6 +198,7 @@ function compression (options) {
 
       // header fields
       res.setHeader('Content-Encoding', method)
+      res.setHeader('X-Content-Length', res.getHeader('Content-Length'));
       res.removeHeader('Content-Length')
 
       // compression
